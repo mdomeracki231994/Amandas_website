@@ -33,9 +33,9 @@ class Product(models.Model):
     # TODO Will need more info from possible API for shipping details.
     # TODO will also need to figure out what Facebook marketplace will need to post things to their API.
     title = models.CharField(max_length=255)
-    weight = models.DecimalField(max_digits=6, decimal_places=2)
-    height = models.DecimalField(max_digits=6, decimal_places=2)
-    depth = models.DecimalField(max_digits=6, decimal_places=2)
+    weight = models.DecimalField(max_digits=6, decimal_places=2, null=True)
+    height = models.DecimalField(max_digits=6, decimal_places=2, null=True)
+    depth = models.DecimalField(max_digits=6, decimal_places=2, null=True)
     description = models.TextField()
     image = models.ImageField()
     in_stock = models.BooleanField(default=True)
